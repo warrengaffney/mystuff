@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Voiceover Artist - Replicated Design</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        :root {
+            --primary-color: #1A1A1A; /* Dark Charcoal/Near Black */
+            --accent-color: #E9A70D; /* Distinct Orange/Gold */
+            --light-text: #FFFFFF;
+            --dark-text: #333333;
+            --bg-light: #F8F8F8; /* Light gray background */
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-text);
+            padding-top: 70px; /* Space for fixed nav */
+        }
+        
+        /* === NAVIGATION BAR === */
+        .navbar {
+            background-color: var(--light-text);
+            border-bottom: 1px solid #eee;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .nav-link, .navbar-brand {
+            color: var(--dark-text) !important;
+            font-weight: 600;
+        }
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+        
+        /* === ACCENT BUTTON STYLING (The Orange CTA) === */
+        .btn-accent {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-weight: 700;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            text-transform: uppercase;
+        }
+        .btn-accent:hover {
+            background-color: #D99A0B; /* Slightly darker hover */
+            color: var(--primary-color);
+            box-shadow: 0 4px 10px rgba(233, 167, 13, 0.5);
+        }
+
+        /* === HERO SECTION === */
+        .hero-section {
+            /* Using a placeholder for the background image/video visual */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://via.placeholder.com/1920x800.png?text=PROFESSIONAL+VOICEOVER+BACKGROUND') center center no-repeat;
+            background-size: cover;
+            color: var(--light-text);
+            padding: 150px 0;
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+        }
+        .hero-section p.lead {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        /* === DEMOS SECTION === */
+        .demo-section {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+        .nav-pills .nav-link {
+            font-weight: 700;
+            color: var(--dark-text);
+            border: 1px solid #ddd;
+            margin: 5px;
+            border-radius: 50px;
+            background-color: var(--light-text);
+            transition: all 0.2s;
+        }
+        .nav-pills .nav-link.active,
+        .nav-pills .nav-link:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color) !important;
+            border-color: var(--accent-color);
+        }
+        /* Custom Player Styling to ensure uniformity in the grid */
+        .demo-player-card {
+            background-color: var(--light-text);
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .demo-player-card audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .demo-genre-label {
+            font-weight: 600;
+            color: var(--accent-color);
+            font-size: 1rem;
+        }
+        
+        /* === CONTENT SECTIONS === */
+        .content-section {
+            padding: 80px 0;
+        }
+        .icon-circle {
+            color: var(--accent-color);
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        /* === TESTIMONIALS (Dark Section) === */
+        .testimonial-section {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 80px 0;
+        }
+        .testimonial-text {
+            font-size: 1.3rem;
+            line-height: 1.6;
+        }
+        .client-name {
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+        
+        /* === FOOTER === */
+        .footer-section {
+            background-color: #222;
+            color: #ccc;
+            padding: 40px 0;
+            font-size: 0.9rem;
+        }
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+        }
+        .footer-section a:hover {
+            color: var(--accent-color);
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <span style="color:var(--accent-color);">VO</span> Artist
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#demos">Demos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#clients">Clients</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <a href="#contact" class="btn btn-accent ms-lg-3">Request A Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-section">
+        <div class="container">
+            <h1>The Voice of Trust.</h1>
+            <p class="lead">Delivering authority, warmth, and professionalism for global brands.</p>
+            <a href="#demos" class="btn btn-accent btn-lg">Listen to Demos Now</a>
+        </div>
+    </header>
+
+    <section id="demos" class="demo-section">
+        <div class="container">
+            <h2 class="text-center mb-5" style="font-weight: 900; color: var(--primary-color);">Hear The Authority</h2>
+            
+            <ul class="nav nav-pills justify-content-center mb-4" id="demoTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="commercial-tab" data-bs-toggle="pill" data-bs-target="#commercial" type="button" role="tab" aria-controls="commercial" aria-selected="true">Commercial</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="corporate-tab" data-bs-toggle="pill" data-bs-target="#corporate" type="button" role="tab" aria-controls="corporate" aria-selected="false">Corporate/eLearning</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="documentary-tab" data-bs-toggle="pill" data-bs-target="#documentary" type="button" role="tab" aria-controls="documentary" aria-selected="false">Documentary</button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="demoTabContent">
+                
+                <div class="tab-pane fade show active" id="commercial" role="tabpanel" aria-labelledby="commercial-tab">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="demo-player-card">
+                                <p class="demo-genre-label">Commercial - Upbeat</p>
+                                <audio controls onplay="pauseOthers(event)">
+                                    <source src="https://github.com/warrengaffney/mystuff/raw/refs/heads/master/Demo_Commercial_FULL.mp3" type="audio/mp3">
+                                </audio>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="demo-player-card">
+                                <p class="demo-genre-label">Commercial - Soft Sell</p>
+                                <audio controls onplay="pauseOthers(event)">
+                                    <source src="https://github.com/warrengaffney/mystuff/raw/refs/heads/master/Demo_TheyAreCenturions.mp3" type="audio/mp3">
+                                </audio>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="demo-player-card">
+                                <p class="demo-genre-label">Commercial - Retail</p>
+                                <audio controls onplay="pauseOthers(event)">
+                                    <source src="https://github.com/warrengaffney/mystuff/raw/refs/heads/master/20190203_100th_Birthday.mp3" type="audio/mp3">
+                                </audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="corporate" role="tabpanel" aria-labelledby="corporate-tab">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="demo-player-card">
+                                <p class="demo-genre-label">Corporate - Explainer</p>
+                                <audio controls onplay="pauseOthers(event)"><source src="PLACEHOLDER_CORP_1.mp3" type="audio/mp3"></audio>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="demo-player-card">
+                                <p class="demo-genre-label">eLearning - Training</p>
+                                <audio controls onplay="pauseOthers(event)"><source src="PLACEHOLDER_CORP_2.mp3" type="audio/mp3"></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane fade" id="documentary" role="tabpanel" aria-labelledby="documentary-tab">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="demo-player-card">
+                                <p class="demo-genre-label">Documentary - Narrative</p>
+                                <audio controls onplay="pauseOthers(event)"><source src="PLACEHOLDER_DOC_1.mp3" type="audio/mp3"></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="about" class="content-section text-center">
+        <div class="container">
+            <h2 class="mb-5" style="font-weight: 900; color: var(--primary-color);">The Voice of Experience</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="fas fa-microchip icon-circle"></i>
+                    <h3>Studio Quality</h3>
+                    <p>Broadcast-ready sound from a custom-built, acoustically treated home studio. Fast turnaround guaranteed.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-comments icon-circle"></i>
+                    <h3>Client Focus</h3>
+                    <p>Dedicated consultation and collaboration to ensure your script's vision is executed perfectly, every time.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-award icon-circle"></i>
+                    <h3>Reliable Authority</h3>
+                    <p>Years of experience voicing high-stakes projects for Fortune 500 companies and government agencies.</p>
+                </div>
+            </div>
+            <a href="#contact" class="btn btn-accent btn-lg mt-5">Get Your Custom Audition</a>
+        </div>
+    </section>
+
+    <section class="testimonial-section">
+        <div class="container text-center">
+            <h2 class="mb-5" style="font-weight: 900; color: var(--accent-color);">What Clients Say</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <blockquote class="blockquote">
+                        <p class="testimonial-text">"The voiceover provided the perfect mix of professionalism and gravitas our training module needed. Turnaround was incredibly fast and the quality was flawless."</p>
+                        <footer class="blockquote-footer">
+                            <span class="client-name">Sarah L.</span>, <cite title="Source Title">Tech Solutions CEO</cite>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients" class="content-section text-center">
+        <div class="container">
+            <h2 class="mb-5" style="font-weight: 900; color: var(--primary-color);">Trusted By</h2>
+            <div class="row justify-content-center">
+                <div class="col-2"><img src="https://via.placeholder.com/100x50.png?text=CLIENT+1" class="img-fluid" alt="Client Logo"></div>
+                <div class="col-2"><img src="https://via.placeholder.com/100x50.png?text=CLIENT+2" class="img-fluid" alt="Client Logo"></div>
+                <div class="col-2"><img src="https://via.placeholder.com/100x50.png?text=CLIENT+3" class="img-fluid" alt="Client Logo"></div>
+                <div class="col-2"><img src="https://via.placeholder.com/100x50.png?text=CLIENT+4" class="img-fluid" alt="Client Logo"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="content-section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5" style="font-weight: 900; color: var(--primary-color);">Ready to Start Your Project?</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Tell me about your project (style, tone, deadline...)" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-accent btn-lg">Send Inquiry Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    &copy; 2025 VO Artist. All rights reserved.
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#">Privacy Policy</a> | <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script>
+        function pauseOthers(event) {
+            document.querySelectorAll('audio').forEach(function(audio) {
+                if (audio !== event.target) {
+                    audio.pause();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
